@@ -8,32 +8,42 @@ import discoverthehuntImg from "@/public/discoverthehunt.png";
 import wordanalyticsImg from "@/public/wordanalytics.png";
 import prontoImg from "@/public/prontobookstore.png";
 import kamaaoImg from "@/public/kamaao.png";
+import homeIcon from "@/public/system-regular-41-home.gif";
+import user from "@/public/user.gif";
+import contact from "@/public/contact.gif";
+import kowledge from "@/public/kowledge.gif";
 
 export const links = [
 
   {
     name: "Home",
     hash: "home",
+    icon: homeIcon
   },
   {
     name: "About",
     hash: "about",
+    icon: user
   },
   {
     name: "Projects",
     hash: "projects",
+    icon: homeIcon
   },
   {
     name: "Skills",
     hash: "skills",
+    icon: kowledge
   },
   {
     name: "Experience",
     hash: "experience",
+    icon: homeIcon
   },
   {
     name: "Contact",
     hash: "contact",
+    icon: contact
   },
 ] as const;
 
@@ -72,7 +82,7 @@ export const projectsData = [
     title: "Kamaao",
     description:
       "I worked on Frontend developing Tailwind CSS, websit is about to providing Jobs like job portal.",
-    tags: ["React js","Swiper Js", "Framer Motion", "Tailwind CSS", "Node Mailer"],
+    tags: ["React js", "Swiper Js", "Framer Motion", "Tailwind CSS", "Node Mailer"],
     imageUrl: kamaaoImg,
     link: 'kamao.vercel.app/'
   },

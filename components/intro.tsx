@@ -10,7 +10,7 @@ import { FaGithub, FaGithubSquare } from 'react-icons/fa';
 
 export default function Intro() {
     return (
-        <section id='home' className='mb-28 max-w-[50rem] text-center scroll-mt-96 sm:mb-0'>
+        <section id='home' className='max-w-[50rem] text-center scroll-mt-96 sm:mb-0'>
             <div className='flex justify-center items-center'>
                 <div className='relative'>
                     <motion.div initial={{ opacity: 0, scale: 0 }} animate={{ opacity: 1, scale: 1 }} transition={{

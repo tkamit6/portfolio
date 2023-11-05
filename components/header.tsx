@@ -5,6 +5,7 @@ import { motion } from 'framer-motion'
 import { links } from '@/lib/data'
 import { Link } from 'react-scroll';
 import { useActiveSectionContext } from '@/context/active-section-context'
+import Image from 'next/image';
 
 
 export default function Header() {
@@ -27,9 +28,9 @@ export default function Header() {
                                     offset={-90}
                                     duration={500}
                                     isDynamic={true}
-                                    className={`flex items-center justify-center px-1 py-3 hover:text-gray-950 transition navbar-navigation `}>
-                                    {link.name}
-                                    
+                                    className={`flex flex-col items-center justify-center px-1 py-3 hover:text-gray-950 transition navbar-navigation `}>
+                                    <span className=''>{link.name}</span>
+                                    {/* <Image src={link.icon} alt="image" width={25} height={25} className='md:hidden block' /> */}
                                 </Link>
                             </motion.li>
                         ))
