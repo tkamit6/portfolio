@@ -20,7 +20,7 @@ export default function Intro() {
                     </motion.div>
                     <motion.span initial={{ opacity: 0, scale: 0 }} animate={{ opacity: 1, scale: 1 }} transition={{
                         type: 'spring', stiffness: 425, delay: 0.1, duration: 1
-                    }} className='absolute bottom-0 right-0 text-3xl '>👏</motion.span>
+                    }} className='absolute bottom-0 right-0 text-3xl '>✌️</motion.span>
                 </div>
             </div>
             <motion.p initial={{ opacity: 0, y: 100 }} animate={{ opacity: 1, y: 0 }} className='mb-10 mt-4 px-4 text-2xl font-medium leading-[1.5rem] sm:text-3xl '>
