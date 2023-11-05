@@ -13,27 +13,27 @@ export const links = [
 
   {
     name: "Home",
-    hash: "#home",
+    hash: "home",
   },
   {
     name: "About",
-    hash: "#about",
+    hash: "about",
   },
   {
     name: "Projects",
-    hash: "#projects",
+    hash: "projects",
   },
   {
     name: "Skills",
-    hash: "#skills",
+    hash: "skills",
   },
   {
     name: "Experience",
-    hash: "#experience",
+    hash: "experience",
   },
   {
     name: "Contact",
-    hash: "#contact",
+    hash: "contact",
   },
 ] as const;
 
@@ -58,7 +58,7 @@ export const experiencesData = [
   },
   {
     title: "Documents Formatter Intern",
-    location: "Remotely",
+    location: "Remote",
     description:
       "IIT Bombay, Mumbai. It was basically work from home job where i have to indent some pages books which they provided me over overleaf. ",
     icon: React.createElement(CgWorkAlt),

@@ -3,8 +3,9 @@
 import React from 'react'
 import { motion } from 'framer-motion'
 import { links } from '@/lib/data'
-import Link from 'next/link'
+import { Link } from 'react-scroll';
 import { useActiveSectionContext } from '@/context/active-section-context'
+
 
 export default function Header() {
 
@@ -20,9 +21,15 @@ export default function Header() {
                         links.map((link) => (
                             <motion.li key={link.hash} initial={{ y: -100, opacity: 0 }}
                                 animate={{ y: 0, opacity: 1 }} className='relative h3/4 flex items-center justify-center'>
-                                <Link href={link.hash} onClick={() => setActiveSection(link.name)} className={`flex items-center justify-center px-1 py-3 hover:text-gray-950 transition ${activeSection === link.name ? 'text-gray-950' : ''}  `}>
+                                <Link to={link.hash}
+                                    spy={true}
+                                    smooth={true}
+                                    offset={-90}
+                                    duration={500}
+                                    isDynamic={true}
+                                    className={`flex items-center justify-center px-1 py-3 hover:text-gray-950 transition navbar-navigation `}>
                                     {link.name}
-                                    {link.name === activeSection && (<motion.span layoutId='activeSection' transition={{ type: 'spring', stiffness: 580, damping: 50 }} className='bg-gray-400 w-[100%] h-1 absolute bottom-1 left-0 rounded-full -z-10'></motion.span>)}
+                                    
                                 </Link>
                             </motion.li>
                         ))

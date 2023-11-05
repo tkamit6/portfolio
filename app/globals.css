@@ -24,3 +24,21 @@ html {
    background: #ff4081 !important;
    z-index: -1;
 }
+
+.navbar-navigation.active{
+   position: relative;
+   transition: all 3s ease-in-out;
+}
+.navbar-navigation.active::after{
+   content: "";
+   position: absolute;
+   bottom: .3rem;
+   left: 0;
+   width: 100%;
+   height: 4px;
+   border-radius: 100px;
+   background-color: #ff4081;  
+}
+.vertical-timeline-element-icon {
+   z-index: -1;
+}

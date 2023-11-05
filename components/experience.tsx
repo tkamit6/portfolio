@@ -8,7 +8,7 @@ import { experiencesData } from '@/lib/data';
 
 export default function Experience() {
     return (
-        <section className='max-w[50rem]'>
+        <section className='max-w[50rem]' id='experience'>
             <SectionHeading>My Experience</SectionHeading>
             <VerticalTimeline>
                 {experiencesData.map((item, index) => (
