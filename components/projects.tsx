@@ -6,13 +6,6 @@ import { projectsData } from '@/lib/data'
 import Project from './project';
 import { useInView } from 'react-intersection-observer';
 import { useActiveSectionContext } from '@/context/active-section-context';
-import { Swiper, SwiperSlide } from 'swiper/react';
-
-// Import Swiper styles
-import 'swiper/css';
-import 'swiper/css/pagination';
-import { Pagination } from 'swiper/modules';
-
 
 type projectProps = (typeof projectsData)[number];
 
