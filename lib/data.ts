@@ -3,11 +3,14 @@ import { CgWorkAlt } from "react-icons/cg";
 import { FaReact } from "react-icons/fa";
 import { LuGraduationCap } from "react-icons/lu";
 import corpcommentImg from "@/public/corpcomment.png";
-import rmtdevImg from "@/public/rmtdev.png";
+import masteryMade from "@/public/masterMade.png";
+import discoverthehuntImg from "@/public/discoverthehunt.png";
 import wordanalyticsImg from "@/public/wordanalytics.png";
+import prontoImg from "@/public/prontobookstore.png";
+import kamaaoImg from "@/public/kamaao.png";
 
 export const links = [
-  
+
   {
     name: "Home",
     hash: "#home",
@@ -36,73 +39,82 @@ export const links = [
 
 export const experiencesData = [
   {
-    title: "Graduated bootcamp",
-    location: "Miami, FL",
+    title: "Junior Front-end Web Developer",
+    location: "Vijay Vihar, Delhi",
     description:
-      "I graduated after 6 months of studying. I immediately found a job as a front-end developer.",
-    icon: React.createElement(LuGraduationCap),
-    date: "2019",
-  },
-  {
-    title: "Front-End Developer",
-    location: "Orlando, FL",
-    description:
-      "I worked as a front-end developer for 2 years in 1 job and 1 year in another job. I also upskilled to the full stack.",
+      "Digi Interact Private Limited",
     icon: React.createElement(CgWorkAlt),
-    date: "2019 - 2021",
+    date: "Dec 2022 - Current",
+    headingColor: "text-[#1d965e]"
   },
   {
-    title: "Full-Stack Developer",
-    location: "Houston, TX",
+    title: "Operation Executive",
+    location: "Shalimar Bagh, Delhi",
     description:
-      "I'm now a full-stack developer working as a freelancer. My stack includes React, Next.js, TypeScript, Tailwind, Prisma and MongoDB. I'm open to full-time opportunities.",
-    icon: React.createElement(FaReact),
-    date: "2021 - present",
+      "Setindiabiz Private Limited.",
+    icon: React.createElement(CgWorkAlt),
+    date: "Mar 2019 - Oct 2022",
+    headingColor: "rgba(0,0,0)"
+  },
+  {
+    title: "Documents Formatter Intern",
+    location: "Remotely",
+    description:
+      "IIT Bombay, Mumbai. It was basically work from home job where i have to indent some pages books which they provided me over overleaf. ",
+    icon: React.createElement(CgWorkAlt),
+    date: "Feb 2021- Feb 2022",
+    headingColor: "rgba(13,110,253)"
   },
 ] as const;
 
 export const projectsData = [
   {
-    title: "CorpComment",
+    title: "Kamaao",
     description:
-      "I worked as a full-stack developer on this startup project for 2 years. Users can give public feedback to companies.",
-    tags: ["React", "Next.js", "MongoDB", "Tailwind", "Prisma"],
-    imageUrl: corpcommentImg,
+      "I worked on Frontend developing Tailwind CSS, websit is about to providing Jobs like job portal.",
+    tags: ["React js","Swiper Js", "Framer Motion", "Tailwind CSS", "Node Mailer"],
+    imageUrl: kamaaoImg,
+    link: 'kamao.vercel.app/'
   },
   {
-    title: "rmtDev",
+    title: "Pronto Book Store",
     description:
-      "Job board for remote developer jobs. I was the front-end developer. It has features like filtering, sorting and pagination.",
-    tags: ["React", "TypeScript", "Next.js", "Tailwind", "Redux"],
-    imageUrl: rmtdevImg,
+      "I worked on Frontend developing using HTML, CSS Javascript and for framework im using bootstrap.",
+    tags: ["HTML", "CSS", "JavaScript", "Bootstrap"],
+    imageUrl: prontoImg,
+    link: 'prontobookstore.com/'
   },
   {
-    title: "Word Analytics",
+    title: "Bid Learn Grow",
     description:
-      "A public web app for quick analytics on text. It shows word count, character count and social media post limits.",
-    tags: ["React", "Next.js", "SQL", "Tailwind", "Framer"],
-    imageUrl: wordanalyticsImg,
+      "Bid Learn Grow website is made on using React Js which is about a bidding website and i built here landing page.",
+    tags: ["React", "Javascript", "Swiper Js", "Bootstrap"],
+    imageUrl: discoverthehuntImg,
+    link: 'discoverthehunt.com/'
   },
-] as const;
+  {
+    title: "Mastery Made",
+    description:
+      "Mastery Made website is made on wordpress as i already told i also have expertise of wordpress. which is about AI marketing organization",
+    tags: ["Wodpress", "Elementor", "Contact Form 7"],
+    imageUrl: masteryMade,
+    link: 'masterymade.com/',
+  },
+];
 
 export const skillsData = [
   "HTML",
   "CSS",
   "JavaScript",
-  "TypeScript",
   "React",
   "Next.js",
   "Node.js",
+  "MongoDB",
+  "Express",
   "Git",
   "Tailwind",
-  "Prisma",
-  "MongoDB",
-  "Redux",
-  "GraphQL",
-  "Apollo",
-  "Express",
-  "PostgreSQL",
-  "Python",
-  "Django",
+  "ContextAPI",
   "Framer Motion",
+  "Bootstrap",
+  "Postman",
 ] as const;
