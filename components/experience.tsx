@@ -30,7 +30,7 @@ export default function Experience() {
                             date={item.date}
                             icon={item.icon}
                         >
-                            <h3 className={`font-semibold capitalize ${item.headingColor}`}>{item.title}</h3>
+                            <h3 className={`font-semibold text-lg capitalize ${item.headingColor}`}>{item.title}</h3>
                             <p className='font-normal !mt-0'>{item.location}</p>
                             <p className='font-normal !mt-0 text-gray-700 '>{item.description}</p>
                         </VerticalTimelineElement>

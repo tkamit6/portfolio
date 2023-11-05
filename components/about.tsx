@@ -17,7 +17,7 @@ export default function About() {
         if (inView) {
             setActiveSection("About")
         }
-    }, [inView])
+    }, [inView, setActiveSection])
 
     return (
         <motion.section ref={ref} initial={{ opacity: 0, y: 100 }} animate={{ opacity: 1, y: 0 }} transition={{ delay: 0.175 }} id='about' className='max-w-[45rem] text-center leading-8 scroll-mt-28'>
@@ -40,7 +40,7 @@ export default function About() {
                 developer.
             </p>
             <p>
-                <span className="italic">When I &apos; m not coding</span>, I enjoy watching movies, and roaming around with friends. I also enjoy{" "}
+                <span className="italic">When I&apos;m not coding</span>, I enjoy watching movies, and roaming around with friends. I also enjoy{" "}
                 <span className="font-medium">learning new things</span>. I am currently
                 learning about{" "}
                 <span className="font-medium">Next Js</span>.
