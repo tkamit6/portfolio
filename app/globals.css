@@ -42,3 +42,6 @@ html {
 .vertical-timeline-element-icon {
    z-index: -1;
 }
+.vertical-timeline-element-content-arrow {
+   border-right: 0.4rem solid #ff4081 !important;  
+}
