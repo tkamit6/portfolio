@@ -100,7 +100,7 @@ export const projectsData = [
       "Bid Learn Grow website is made on using React Js which is about a bidding website and i built here landing page.",
     tags: ["React", "Javascript", "Swiper Js", "Bootstrap"],
     imageUrl: discoverthehuntImg,
-    link: 'discoverthehunt.com/'
+    link: 'discoverthehunt.com/ <br/> teal-marzipan-91fafb.netlify.app/'
   },
   {
     title: "Mastery Made",
