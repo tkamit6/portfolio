@@ -12,7 +12,7 @@ export default function Contact() {
         <motion.section id='contact' initial={{ opacity: 0 }} whileInView={{ opacity: 1 }} transition={{ delay: 0.250 }} className='my-20 w-[min(100%,38rem)]'>
             <SectionHeading>Contact me</SectionHeading>
             <p className='text-gray-700 text-center'>Please contact me directly at <a className='underline' href='mailto:tkamit6@gmail.com'>tkamit6@gmail.com</a>{" "}
-                or through this form</p>
+                or through this form <br /> +91-8802665778</p>
             <form action={ async (formData) => {
                 await sendEmail(formData)
             }} className='mt-10 flex flex-col gap-6'>
