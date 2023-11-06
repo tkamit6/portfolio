@@ -34,9 +34,9 @@ export default function Intro() {
                 delay: 0.1
             }} className='flex justify-center gap-4 text-lg font-medium flex-wrap'>
                 <Link href="#contact" className='bg-gray-900 group text-white px-7 py-2 flex items-center gap-2 rounded-full outline-none focus:scale-110 hover:scale-110 hover:bg-gray-950 active:bg-gray-950 transition duration-300' >Contact me here <BsArrowRight className='opacity-70 group-hover:translate-x-2 transition' /> </Link>
-                <a href='/CV.pdf' download={true} className='flex group focus:scale-110 hover:scale-110 transition duration-300 bg-white px-7 py-2 items-center gap-2 rounded-full dark:bg-white/10' > Download CV <HiDownload className='opacity-70 group-hover:translate-y-2 transition' /></a>
-                <a href='https://www.linkedin.com/in/amitaggarwal8/' target='_blank' className='flex group focus:scale-110 hover:scale-110 transition duration-300 bg-white p-5 items-center gap-2 rounded-full dark:bg-white/10'> <BsLinkedin className='opacity-70 group-hover:scale-3 transition dark:text-white/90'  /></a>
-                <a href='https://github.com/tkamit6' target='_blank' className='flex bg-white group focus:scale-110 hover:scale-110 transition duration-300 p-4 items-center gap-2 rounded-full text-[1.35rem] dark:bg-white/10 '> <FaGithubSquare className='opacity-70 dark:text-white/90 group-hover:scale-3 transition' /></a>
+                <a href='/CV.pdf' download={true} className='flex group focus:scale-110 hover:scale-110 transition duration-300 bg-white px-7 py-2 items-center gap-2 rounded-full dark:bg-white/10 -z-10' > Download CV <HiDownload className='opacity-70 group-hover:translate-y-2 transition' /></a>
+                <a href='https://www.linkedin.com/in/amitaggarwal8/' target='_blank' className='flex group focus:scale-110 hover:scale-110 transition duration-300 bg-white p-5 items-center gap-2 -z-10 rounded-full dark:bg-white/10'> <BsLinkedin className='opacity-70 group-hover:scale-3 transition dark:text-white/90'  /></a>
+                <a href='https://github.com/tkamit6' target='_blank' className='flex bg-white group focus:scale-110 hover:scale-110 transition duration-300 p-4 items-center gap-2 rounded-full text-[1.35rem] -z-10 dark:bg-white/10 '> <FaGithubSquare className='opacity-70 dark:text-white/90 group-hover:scale-3 transition ' /></a>
             </motion.div>
         </section>
     )

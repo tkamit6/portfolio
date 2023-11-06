@@ -23,7 +23,7 @@ export default function Header() {
                                     offset={-90}
                                     duration={500}
                                     isDynamic={true}
-                                    className={`flex flex-col items-center justify-center px-1 py-3 hover:text-gray-950 transition navbar-navigation cursor-pointer dark:hover:text-gray-400`}>
+                                    className={`flex flex-col items-center justify-center px-1 py-3 hover:text-gray-950 transition navbar-navigation cursor-pointer dark:text-gray-200 dark:hover:text-gray-200`}>
                                     <span className=''>{link.name}</span>
                                     {/* <Image src={link.icon} alt="image" width={25} height={25} className='md:hidden block' /> */}
                                 </Link>

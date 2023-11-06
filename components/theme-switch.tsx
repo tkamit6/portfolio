@@ -31,9 +31,9 @@ export default function ThemeSwitch() {
         }
     }, [])
     return (
-        <button className='fixed bottom-10 right-10 bg-white w-[3rem] h-[3rem] bg-opacity-80 backdrop-blur-[0.5rem] border border-gray-500 border-opacity-40 shadow-2xl rounded-full flex items-center justify-center hover:scale-[1.15] active:scale-105 transition-all dark:bg-gray-950' onClick={toggleTheme}>
+        <button className='fixed bottom-10 right-10 bg-gray-950 w-[3rem] h-[3rem] bg-opacity-80 backdrop-blur-[0.5rem] border border-black shadow-2xl rounded-full flex items-center justify-center hover:scale-[1.15] active:scale-105 transition-all dark:bg-gray-950' onClick={toggleTheme}>
             {
-                theme === "light" ? <BsSun /> : <BsMoon />
+                theme === "light" ? <BsSun className='text-white' /> : <BsMoon />
             }
         </button>
     )
