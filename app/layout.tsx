@@ -9,7 +9,7 @@ const inter = Inter({ subsets: ['latin'] })
 
 export const metadata = {
   title: 'Amit | Personal Portfolio Web App',
-  description: "I'm Amit an energetic developer specializing in Frontend development.",
+  description: "I'm Amit an energetic developer specializing in Frontend development, React Js, Tailwind CSS, Javascript ES6 able to develop responsive websites and web apps.",
 }
 
 export default function RootLayout({
