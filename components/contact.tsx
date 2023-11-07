@@ -14,7 +14,7 @@ export default function Contact() {
     })
 
     const onChange = (e: React.FormEvent<HTMLFormElement>) => {
-        setFormData({ ...formData, [e.target.name]: e.target.value })
+        setFormData({ ...formData})
     }
 
     const sendMessage = async (e: React.FormEvent<HTMLFormElement>) => {
