@@ -4,6 +4,7 @@ import { FaReact } from "react-icons/fa";
 import { LuGraduationCap } from "react-icons/lu";
 import corpcommentImg from "@/public/corpcomment.png";
 import masteryMade from "@/public/masterMade.png";
+import amsImg from "@/public/ams.png";
 import discoverthehuntImg from "@/public/discoverthehunt.png";
 import wordanalyticsImg from "@/public/wordanalytics.png";
 import prontoImg from "@/public/prontobookstore.png";
@@ -109,6 +110,14 @@ export const projectsData = [
     tags: ["Wodpress", "Elementor", "Contact Form 7"],
     imageUrl: masteryMade,
     link: 'masterymade.com/',
+  },
+  {
+    title: "AMS Clinic",
+    description:
+      "AMS Clinic website is made on wordpress as i already told i also have expertise of wordpress.",
+    tags: ["Wodpress", "Elementor", "Contact Form 7"],
+    imageUrl: amsImg,
+    link: 'amsclinic.co.in/',
   },
 ];
 
