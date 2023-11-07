@@ -6,6 +6,7 @@ import { FaPaperPlane } from 'react-icons/fa';
 import { delay, motion } from 'framer-motion';
 import { sendEmail } from '@/action/senEmail';
 import toast from "react-hot-toast";
+import Swal from 'sweetalert2';
 
 export default function Contact() {
     // const [formData, setFormData] = useState<{ senderMessage: string; senderEmail: string }>({
@@ -19,16 +20,18 @@ export default function Contact() {
 
     const sendMessage = async (e: React.FormEvent) => {
         e.preventDefault()
+        console.log(senderEmail, message);
         toast.success("Email sent successfully!");
-        const res = await fetch('/api/contact', {
-            method: 'POST',
-            headers: {
-                'Content-Type': 'application/json',
-            },
-            body: JSON.stringify({ senderEmail, message }),
+        Swal.fire({
+            title: "Something went wrong!",
+            text: "Call me at +918802665778",
+            icon: "error",
+            showCloseButton: false,
+            showCancelButton: true,
+            focusConfirm: false,
+            confirmButtonText: `<a href="tel:+918802665778">Call</a>`,
+            confirmButtonAriaLabel: "Thumbs up, great!",
         });
-        const data = await res.json();
-        console.log(data);
     }
 
 
