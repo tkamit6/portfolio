@@ -24,12 +24,12 @@ export default function Contact() {
         toast.success("Email sent successfully!");
         Swal.fire({
             title: "Something went wrong!",
-            text: "Call me at +918802665778",
+            text: "WhatsApp me at +918802665778",
             icon: "error",
             showCloseButton: false,
             showCancelButton: true,
             focusConfirm: false,
-            confirmButtonText: `<a href="tel:+918802665778">Call</a>`,
+            confirmButtonText: `<a href="https://api.whatsapp.com/send/?phone=%2B918802665778&text&type=phone_number&app_absent=0" target="_blank">WhatsApp</a>`,
             confirmButtonAriaLabel: "Thumbs up, great!",
         });
     }
