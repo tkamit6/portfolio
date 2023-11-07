@@ -8,7 +8,7 @@ import { Link } from 'react-scroll';
 export default function Header() {
 
     return <header className='z-[999] realtive'>
-        <motion.div className=' fixed left-1/2 -translate-x-1/2 w-full border border-white border-opacity-40 bg-white/60 bg-opacity-80 shadow-xl shadow-black/[0.03] backdrop-blur-[0.5rem] rounded-full h-[3.25rem] top-3 sm:top-6 sm:h-[3.25rem] sm:w-[36rem] sm:rounded-full dark:bg-gray-950'
+        <motion.div className=' fixed z-50 left-1/2 -translate-x-1/2 w-full border border-white border-opacity-40 bg-white/60 bg-opacity-80 shadow-xl shadow-black/[0.03] backdrop-blur-[0.5rem] rounded-full h-[3.25rem] top-3 sm:top-6 sm:h-[3.25rem] sm:w-[36rem] sm:rounded-full dark:bg-gray-950'
             initial={{ y: -100, x: '-50%', opacity: 0 }}
             animate={{ y: 0, x: '-50%', opacity: 1 }}>
             <nav className='flex flex-wrap fixed left-1/2 h-12 -translate-x-1/2 sm:h-[initial] py-0'>
