@@ -13,10 +13,7 @@ export default function Contact() {
         senderMessage: '',
     })
 
-    const onChange = (e: React.FormEvent<HTMLFormElement>) => {
-        setFormData({ ...formData})
-    }
-
+   
     const sendMessage = async (e: React.FormEvent<HTMLFormElement>) => {
         e.preventDefault()
         try {
@@ -36,9 +33,9 @@ export default function Contact() {
                 or through this form <br /> +91-8802665778</p>
             <form onSubmit={sendMessage} className='mt-10 flex flex-col gap-6'>
                 <input name="senderEmail"
-                    value={formData.senderEmail} type="email" onChange={onChange} required placeholder='Your Email' className='h-12 rounded-lg border border-black/10 p-4 shadow-sm dark:bg-gray-50/10' />
+                    value={formData.senderEmail} type="email" required placeholder='Your Email' className='h-12 rounded-lg border border-black/10 p-4 shadow-sm dark:bg-gray-50/10' />
                 <textarea name="senderMessage"
-                    value={formData.senderMessage} onChange={onChange} required placeholder='Your Message' className='h-52 rounded-lg border-black/10 p-4 shadow-md dark:bg-gray-50/10' />
+                    value={formData.senderMessage} required placeholder='Your Message' className='h-52 rounded-lg border-black/10 p-4 shadow-md dark:bg-gray-50/10' />
                 <button type='submit' className='group hover:scale-110 h-[3rem] w-[8rem] bg-gray-900  text-white rounded-full outline-none transition justify-center items-center flex gap-2'>Submit <FaPaperPlane className='text-xs opacity-70 transition-all group-hover:opacity-100 group-hover:translate-x-2' /> </button>
             </form>
         </motion.section>
