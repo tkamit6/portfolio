@@ -104,14 +104,6 @@ export const projectsData = [
     link: 'discoverthehunt.com/ <br/> teal-marzipan-91fafb.netlify.app/'
   },
   {
-    title: "Mastery Made",
-    description:
-      "Mastery Made website is made on wordpress as i already told i also have expertise of wordpress. which is about AI marketing organization",
-    tags: ["Wodpress", "Elementor", "Contact Form 7"],
-    imageUrl: masteryMade,
-    link: 'masterymade.com/',
-  },
-  {
     title: "AMS Clinic",
     description:
       "AMS Clinic website is made on wordpress as i already told i also have expertise of wordpress.",
