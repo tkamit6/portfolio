@@ -7,6 +7,7 @@ import Link from 'next/link';
 import { BsArrowRight, BsLinkedin } from 'react-icons/bs';
 import { HiDownload } from 'react-icons/hi';
 import { FaGithub, FaGithubSquare } from 'react-icons/fa';
+import dp from '../public/dp.jpeg'
 
 export default function Intro() {
     return (
@@ -16,7 +17,7 @@ export default function Intro() {
                     <motion.div initial={{ opacity: 0, scale: 0 }} animate={{ opacity: 1, scale: 1 }} transition={{
                         type: 'tween', duration: 0.2
                     }} >
-                        <Image src="https://media.licdn.com/dms/image/D4D35AQG4KbUNsmZw1w/profile-framedphoto-shrink_200_200/0/1692800040511?e=1699513200&v=beta&t=czdjGsRvXbnwR8rwOm7S4KIpq9aB3pXLBT7W2DfoWPU" alt="User" width="192" height="192" priority={true} className='h-24 w-24 border-[0.35rem] rounded-full border-white object-cover shadow-xl' />
+                        <Image src={dp} alt="User" width="192" height="192" priority={true} className='h-24 w-24 border-[0.35rem] rounded-full border-white object-cover shadow-xl' />
                     </motion.div>
                     <motion.span initial={{ opacity: 0, scale: 0 }} animate={{ opacity: 1, scale: 1 }} transition={{
                         type: 'spring', stiffness: 425, delay: 0.1, duration: 1
