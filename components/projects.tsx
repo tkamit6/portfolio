@@ -16,11 +16,11 @@ export default function Projects() {
     });
     const { setActiveSection } = useActiveSectionContext();
 
-    useEffect(() => {
-        if (inView) {
-            setActiveSection("Projects")
-        }
-    })
+    // useEffect(() => {
+    //     if (inView) {
+    //         setActiveSection("Projects")
+    //     }
+    // },[])
     return (
         <section id='projects' className='scroll-mt-28 mx-auto w-[100%] sm:w-[100%] ' >
             <SectionHeading>My projects </SectionHeading>
