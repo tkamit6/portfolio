@@ -22,7 +22,7 @@ export default function Projects() {
         }
     })
     return (
-        <section id='projects' ref={ref} className='scroll-mt-28 mx-auto w-[100%] sm:w-[100%] ' >
+        <section id='projects' className='scroll-mt-28 mx-auto w-[100%] sm:w-[100%] ' >
             <SectionHeading>My projects </SectionHeading>
             {
                 projectsData.map((project, index) => (

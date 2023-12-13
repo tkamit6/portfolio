@@ -13,6 +13,7 @@ import homeIcon from "@/public/system-regular-41-home.gif";
 import user from "@/public/user.gif";
 import contact from "@/public/contact.gif";
 import kowledge from "@/public/kowledge.gif";
+import mernJobImg from "@/public/mern-job-five.vercel.app_.png";
 
 export const links = [
 
@@ -110,6 +111,14 @@ export const projectsData = [
     tags: ["Wodpress", "Elementor", "Contact Form 7"],
     imageUrl: amsImg,
     link: 'amsclinic.co.in/',
+  },
+  {
+    title: "MERN Job Website",
+    description:
+      "MERN Job Website built using react.js tailwind css and for login im using google authentication.",
+    tags: ["React.Js", "Tailwind CSS", "Node", "Mongo DB", "Google Auth"],
+    imageUrl: mernJobImg,
+    link: 'mern-job-five.vercel.app/',
   },
 ];
 

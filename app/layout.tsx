@@ -3,7 +3,8 @@ import Header from '../components/header'
 import './globals.css'
 import { Inter } from 'next/font/google'
 import ThemeSwitch from '@/components/theme-switch'
-import ThemeContextProvider from '@/context/theme-context'
+import ThemeContextProvider from '@/context/theme-context';
+import { initGA, logPageView } from '../path-to-analytics-file/analytics';
 
 const inter = Inter({ subsets: ['latin'] })
 
