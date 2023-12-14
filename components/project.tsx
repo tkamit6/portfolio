@@ -24,8 +24,8 @@ export default function Project({
     const opacityProgress = useTransform(scrollYProgress, [0, 1], [0.6, 1])
 
     return <Link href={`https://${link}`} target="_blank" className="group">
-        <div className='  bg-gray-100 dark:bg-white/10 sm:max-w-[42rem] border-2 w-[100%] border-black/5 overflow-hidden sm:pr-8 relative sm:h-[20rem] m-auto mb-3 hover:bg-white transition shadow-md sm:mb-8 -z-10 rounded-lg even:pl-10  grid grid-cols-2 '>
-            <div className='sm:group-even:ml-[18rem] col-span-1 group-even:ml-[6rem] w-[70%]  pt-4 pb-8 px-5 sm:pl-10 sm:pr-2 sm:pt-10 sm:max-w-[50%] flex flex-col h-full'>
+        <div className='  bg-gray-100 dark:bg-white/10 sm:max-w-[42rem] border-2 w-[100%] border-black/5 overflow-hidden sm:pr-8 relative sm:h-[20rem] m-auto mb-3 hover:bg-white transition shadow-md sm:mb-8 -z-10 rounded-lg even:pl-10  '>
+            <div className='sm:group-even:ml-[18rem] group-even:ml-[6rem] w-[70%]  pt-4 pb-8 px-5 sm:pl-10 sm:pr-2 sm:pt-10 sm:max-w-[50%] flex flex-col h-full'>
                 <h3 className='text-2xl semibold font-medium'>{title}</h3>
                 <p className='mt-2 leading-relaxed text-gray-700 dark:text-white/70 '>{description}</p>
                 <a href={`https://${link}`} target="_blank" className="text-blue-500">{link}</a>
@@ -37,9 +37,9 @@ export default function Project({
                     }
                 </ul>
             </div>
-            <div className="col-span-1">
+            {/* <div className="col-span-1"> */}
                 <Image src={imageUrl} alt='image' quality={95} className='group-even:left-[-10rem] absolute top-8 -right-[7rem] w-[70%] sm:w-[28rem] rounded-t-lg shadow-2xl' />
-            </div>
+            {/* </div> */}
         </div>
     </Link>
 }
