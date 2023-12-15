@@ -116,7 +116,7 @@ export const projectsData = [
     title: "MERN Job Website",
     description:
       "MERN Job Website built using react.js tailwind css and for login im using google authentication.",
-    tags: ["React.Js", "Tailwind CSS", "Node", "Mongo DB", "Google Auth"],
+    tags: ["React.Js", "Tailwind CSS", "Node", "Mongo DB", "Firebase Auth"],
     imageUrl: mernJobImg,
     link: 'mern-job-five.vercel.app/',
   },
