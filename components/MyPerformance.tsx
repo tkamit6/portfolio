@@ -45,7 +45,7 @@ const chartData = [
     },
     {
         name: "9",
-        price: 89,
+        price: 70,
         sell: 300,
     },
     {
