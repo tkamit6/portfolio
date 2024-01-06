@@ -5,6 +5,7 @@ import Projects from "@/components/projects";
 import SectionDevider from "@/components/section-devider";
 import Skills from "@/components/skills";
 import Contact from "@/components/contact";
+import MyPerformance from "@/components/MyPerformance";
 
 export default function Home() {
   return (
@@ -19,6 +20,8 @@ export default function Home() {
       <SectionDevider />
       <Experience />
       <Contact />
+      <SectionDevider />
+      <MyPerformance />
     </main>
   )
 }
