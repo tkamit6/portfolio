@@ -47,6 +47,7 @@ export const links = [
     hash: "contact",
     icon: contact
   },
+ 
 ] as const;
 
 export const experiencesData = [
