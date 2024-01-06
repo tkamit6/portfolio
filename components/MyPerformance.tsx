@@ -1,6 +1,7 @@
 
 "use client";
 import { AreaChart } from "keep-react";
+import SectionHeading from "./section-heading";
 const chartData = [
     {
         name: "1",
@@ -57,6 +58,8 @@ const chartData = [
 const MyPerformance = () => {
     return (
         <section id='myperformance' className='scroll-mt-28 mx-auto w-[100%] sm:w-[70%] mb-10 ' >
+            <SectionHeading>My Performance </SectionHeading>
+
             <AreaChart
                 dataKey="price"
                 // secondaryDataKey="sell"
