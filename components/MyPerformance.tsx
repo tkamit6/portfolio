@@ -43,7 +43,16 @@ const chartData = [
         price: 77,
         sell: 250,
     },
-    
+    {
+        name: "9",
+        price: 89,
+        sell: 300,
+    },
+    {
+        name: "j",
+        price: 99,
+        sell: 400,
+    },
 ];
 
 const MyPerformance = () => {
