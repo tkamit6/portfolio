@@ -4,6 +4,7 @@ import './globals.css'
 import { Inter } from 'next/font/google'
 import ThemeSwitch from '@/components/theme-switch'
 import ThemeContextProvider from '@/context/theme-context';
+import { SpeedInsights } from "@vercel/speed-insights/next"
 // import { initGA, logPageView } from '../path-to-analytics-file/analytics';
 
 const inter = Inter({ subsets: ['latin'] })
@@ -29,6 +30,7 @@ export default function RootLayout({
         <ThemeContextProvider>
           <ActiveSectionContextProvider>
             <Header />
+            <SpeedInsights/>
             {children}
             <ThemeSwitch />
           </ActiveSectionContextProvider>
