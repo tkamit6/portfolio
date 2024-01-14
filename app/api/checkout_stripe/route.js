@@ -1,6 +1,6 @@
 const stripe = require('stripe')(process.env.STRIPE_SECRET_KEY);
 
-export default async function POST(req, res) {
+export async function POST(req, res) {
   try {
     // Create Checkout Sessions from body params.
     const session = await stripe.checkout.sessions.create({
