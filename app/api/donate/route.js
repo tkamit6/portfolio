@@ -16,7 +16,7 @@ export const POST = async (request) => {
           currency: "usd",
           unit_amount: 2 * 100,
           product_data: {
-            name: "amit",
+            name: "Donation",
           },
         },
       }],
