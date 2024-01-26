@@ -43,6 +43,8 @@ export default function ThemeSwitch() {
         }
     };
 
+    
+
 
     useEffect(() => {
         const localTheme = window.localStorage.getItem("theme") as Theme | null;
@@ -60,7 +62,7 @@ export default function ThemeSwitch() {
                 theme === "light" ? <BsSun className='text-white' /> : <BsMoon />
             }
         </button>
-        <button className='fixed md:top-8 md:right-10 top-[70%] right-3 rotate-90 md:rotate-0 px-6 py-2 bg-opacity-80 backdrop-blur-[0.5rem] border border-black shadow-2xl rounded-full flex items-center justify-center hover:scale-[1.15] active:scale-105 transition-all dark:text-white dark:bg-gray-950' onClick={handleDonate}>
+        <button className='fixed  md:right-10 top-[70%] md:top-10 right-3 rotate-90 md:rotate-0 px-6 py-2 bg-opacity-80 backdrop-blur-[0.5rem] border border-black shadow-2xl rounded-full flex items-center justify-center hover:scale-[1.15] active:scale-105 transition-all dark:text-white dark:bg-gray-950' onClick={handleDonate}>
             Donate
         </button>
     </>
