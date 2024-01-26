@@ -1,12 +1,7 @@
 import React from "react";
 import { CgWorkAlt } from "react-icons/cg";
-import { FaReact } from "react-icons/fa";
-import { LuGraduationCap } from "react-icons/lu";
-import corpcommentImg from "@/public/corpcomment.png";
-import masteryMade from "@/public/masterMade.png";
 import amsImg from "@/public/ams.png";
 import discoverthehuntImg from "@/public/discoverthehunt.png";
-import wordanalyticsImg from "@/public/wordanalytics.png";
 import prontoImg from "@/public/prontobookstore.png";
 import kamaaoImg from "@/public/kamaao.png";
 import homeIcon from "@/public/system-regular-41-home.gif";
@@ -14,6 +9,7 @@ import user from "@/public/user.gif";
 import contact from "@/public/contact.gif";
 import kowledge from "@/public/kowledge.gif";
 import mernJobImg from "@/public/mern-job-five.vercel.app_.png";
+import emartImg from "@/public/emart.webp"
 
 export const links = [
 
@@ -96,6 +92,14 @@ export const projectsData = [
     tags: ["HTML", "CSS", "JavaScript", "Bootstrap"],
     imageUrl: prontoImg,
     link: 'prontobookstore.com/'
+  },
+  {
+    title: "E-Commerce",
+    description:
+      "Built e-commerce website for practices purpose using Next Js and Tailwind for authentication using Next Auth and for payment Stripe, fetching data from mongo db and 1 other free api.",
+    tags: ["Next Js", "Next Auth", "Tailwind"],
+    imageUrl: emartImg,
+    link: 'emart-online.vercel.app/'
   },
   {
     title: "Bid Learn Grow",
