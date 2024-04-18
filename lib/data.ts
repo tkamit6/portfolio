@@ -10,6 +10,7 @@ import contact from "@/public/contact.gif";
 import kowledge from "@/public/kowledge.gif";
 import mernJobImg from "@/public/mern-job-five.vercel.app_.png";
 import emartImg from "@/public/emart.webp"
+import pocketful from "@/public/1.svg"
 
 export const links = [
 
@@ -48,12 +49,21 @@ export const links = [
 
 export const experiencesData = [
   {
+    title: "Junior Next Js Developer",
+    location: "Okhla, Delhi",
+    description:
+      "Pocketful Private Limited",
+    icon: React.createElement(CgWorkAlt),
+    date: "Jan 2024 - Feb 2024",
+    headingColor: "text-[#1d965e]"
+  },
+  {
     title: "Junior Front-end Web Developer",
     location: "Vijay Vihar, Delhi",
     description:
       "Digi Interact Private Limited",
     icon: React.createElement(CgWorkAlt),
-    date: "Dec 2022 - Current",
+    date: "Dec 2022 - Dec 2023",
     headingColor: "text-[#1d965e]"
   },
   {
@@ -115,7 +125,7 @@ export const projectsData = [
       "AMS Clinic website is made on wordpress as i already told i also have expertise of wordpress.",
     tags: ["Wodpress", "Elementor", "Contact Form 7"],
     imageUrl: amsImg,
-    link: 'amsclinic.co.in/',
+    link: 'amsclinic.ca',
   },
   {
     title: "MERN Job Website",
