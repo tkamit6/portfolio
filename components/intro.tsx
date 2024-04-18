@@ -17,7 +17,7 @@ export default function Intro() {
                     <motion.div initial={{ opacity: 0, scale: 0 }} animate={{ opacity: 1, scale: 1 }} transition={{
                         type: 'tween', duration: 0.2
                     }} >
-                        <Image src={dp} alt="User" width="200" height="200" priority={true} className=' border-[0.35rem] rounded-full border-white object-cover shadow-xl' />
+                        <Image src={dp} alt="User" width="200" height="200" priority={true} className=' border-0 rounded-full border-white object-cover shadow-2xl' />
                     </motion.div>
                     <motion.span initial={{ opacity: 0, scale: 0 }} animate={{ opacity: 1, scale: 1 }} transition={{
                         type: 'spring', stiffness: 425, delay: 0.1, duration: 1
