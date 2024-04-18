@@ -51,3 +51,17 @@ div:where(.swal2-container) div:where(.swal2-popup){
 div:where(.swal2-container) button:where(.swal2-styled).swal2-confirm{
    background-color: #25d366 !important;
 }
+
+::-webkit-scrollbar {
+   width: 7px;
+ }
+   ::-webkit-scrollbar-track {
+   background: transparent; 
+ }
+   ::-webkit-scrollbar-thumb {
+   background: #ff4081; 
+     border-radius:10px;
+ }
+ ::-webkit-scrollbar-thumb:hover {
+   background: #555; 
+} 

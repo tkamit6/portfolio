@@ -7,7 +7,7 @@ import Link from 'next/link';
 import { BsArrowRight, BsLinkedin } from 'react-icons/bs';
 import { HiDownload } from 'react-icons/hi';
 import { FaGithub, FaGithubSquare } from 'react-icons/fa';
-import dp from '../public/dp.jpeg'
+import dp from '../public/dp1.webp'
 
 export default function Intro() {
     return (
@@ -17,7 +17,7 @@ export default function Intro() {
                     <motion.div initial={{ opacity: 0, scale: 0 }} animate={{ opacity: 1, scale: 1 }} transition={{
                         type: 'tween', duration: 0.2
                     }} >
-                        <Image src={dp} alt="User" width="192" height="192" priority={true} className='h-24 w-24 border-[0.35rem] rounded-full border-white object-cover shadow-xl' />
+                        <Image src={dp} alt="User" width="200" height="200" priority={true} className=' border-[0.35rem] rounded-full border-white object-cover shadow-xl' />
                     </motion.div>
                     <motion.span initial={{ opacity: 0, scale: 0 }} animate={{ opacity: 1, scale: 1 }} transition={{
                         type: 'spring', stiffness: 425, delay: 0.1, duration: 1
@@ -26,8 +26,8 @@ export default function Intro() {
             </div>
             <motion.p initial={{ opacity: 0, y: 100 }} animate={{ opacity: 1, y: 0 }} className='mb-10 mt-4 px-4 text-2xl font-medium leading-[1.5rem] sm:text-3xl '>
                 <span className="font-bold">Hello, I &apos; m Amit.</span> I&apos;m a{" "}
-                <span className="font-bold">Front-end developer</span> and on the way to become <span className="font-bold"> full-stack developer</span> with{" "}
-                <span className="font-bold">good knowledge</span> and experience. I enjoy
+                <span className="font-bold">Front-end developer</span> and <span className="font-bold"></span> with{" "}
+                <span className="font-bold">good knowledge</span> experience and expertise. I enjoy
                 building <span className="italic">sites & web apps</span>.
             </motion.p>
 
