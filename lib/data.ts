@@ -49,7 +49,7 @@ export const links = [
 
 export const experiencesData = [
   {
-    title: "Junior Next Js Developer",
+    title: "Next Js Developer",
     location: "Okhla, Delhi",
     description:
       "Pocketful Private Limited",
@@ -93,7 +93,7 @@ export const projectsData = [
       "I worked on Frontend developing Tailwind CSS, websit is about to providing Jobs like job portal.",
     tags: ["React js", "Swiper Js", "Framer Motion", "Tailwind CSS", "Node Mailer"],
     imageUrl: kamaaoImg,
-    link: 'kamao.vercel.app/'
+    link: 'kamaao.app/'
   },
   {
     title: "Pronto Book Store",
