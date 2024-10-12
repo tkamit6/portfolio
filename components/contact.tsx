@@ -23,9 +23,9 @@ export default function Contact() {
         console.log(senderEmail, message);
         toast.success("Email sent successfully!");
         Swal.fire({
-            title: "Something went wrong!",
-            text: "WhatsApp me at +918802665778",
-            icon: "error",
+            title: "WhatsApp me at",
+            text: " +918802665778",
+            // icon: "error",
             showCloseButton: false,
             showCancelButton: true,
             focusConfirm: false,

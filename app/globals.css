@@ -65,3 +65,6 @@ div:where(.swal2-container) button:where(.swal2-styled).swal2-confirm{
  ::-webkit-scrollbar-thumb:hover {
    background: #555; 
 } 
+div:where(.swal2-container) button:where(.swal2-styled).swal2-confirm:focus{
+   box-shadow: none !important;
+}

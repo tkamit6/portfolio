@@ -20,8 +20,8 @@ export default function Home() {
       <SectionDevider />
       <Experience />
       <Contact />
-      <SectionDevider />
-      <MyPerformance />
+      {/* <SectionDevider /> */}
+      {/* <MyPerformance /> */}
     </main>
   )
 }
