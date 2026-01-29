@@ -1,77 +1,131 @@
+"use client"
 
-"use client";
-import { AreaChart } from "keep-react";
-import SectionHeading from "./section-heading";
+import * as React from "react"
+import { TrendingUp } from "lucide-react"
+import { Label, Pie, PieChart } from "recharts"
+import { delay, motion } from 'framer-motion';
+
+import {
+  Card,
+  CardContent,
+  CardDescription,
+  CardFooter,
+  CardHeader,
+  CardTitle,
+} from "@/components/ui/card"
+
+import {
+  ChartConfig,
+  ChartContainer,
+  ChartTooltip,
+  ChartTooltipContent,
+} from "@/components/ui/chart"
+
+export const description = "A donut chart with text"
+
 const chartData = [
-    {
-        name: "1",
-        price: 0,
-        sell: 0,
-    },
-    {
-        name: "2",
-        price: 60,
-        sell: 200,
-    },
-    {
-        name: "3",
-        price: 40,
-        sell: 120,
-    },
-    {
-        name: "4",
-        price: 55,
-        sell: 130,
-    },
-    {
-        name: "5",
-        price: 50,
-        sell: 120,
-    },
-    {
-        name: "6",
-        price: 60,
-        sell: 213,
-    },
-    {
-        name: "7",
-        price: 59,
-        sell: 325,
-    },
-    {
-        name: "8",
-        price: 77,
-        sell: 250,
-    },
-    {
-        name: "9",
-        price: 70,
-        sell: 300,
-    },
-    {
-        name: "j",
-        price: 99,
-        sell: 400,
-    },
-];
+  { browser: "chrome", visitors: 275, fill: "var(--color-chrome)" },
+  { browser: "safari", visitors: 200, fill: "var(--color-safari)" },
+  { browser: "firefox", visitors: 287, fill: "var(--color-firefox)" },
+  { browser: "edge", visitors: 173, fill: "var(--color-edge)" },
+  { browser: "other", visitors: 190, fill: "var(--color-other)" },
+]
 
-const MyPerformance = () => {
-    return (
-        <section id='myperformance' className='scroll-mt-28 mx-auto w-[100%] sm:w-[70%] mb-10 ' >
-            <SectionHeading>My Performance </SectionHeading>
+const chartConfig = {
+  visitors: {
+    label: "Visitors",
+  },
+  chrome: {
+    label: "Chrome",
+    color: "hsl(var(--chart-1))",
+  },
+  safari: {
+    label: "Safari",
+    color: "hsl(var(--chart-2))",
+  },
+  firefox: {
+    label: "Firefox",
+    color: "hsl(var(--chart-3))",
+  },
+  edge: {
+    label: "Edge",
+    color: "hsl(var(--chart-4))",
+  },
+  other: {
+    label: "Other",
+    color: "hsl(var(--chart-5))",
+  },
+} satisfies ChartConfig
 
-            <AreaChart
-                dataKey="price"
-                // secondaryDataKey="sell"
-                showTooltip={true}
-                showGridLine={false}
-                showXaxis={true}
-                showYaxis={false}
-                chartData={chartData}
+export default function Component() {
+  const totalVisitors = React.useMemo(() => {
+    return chartData.reduce((acc, curr) => acc + curr.visitors, 0)
+  }, [])
+
+  return (
+    <motion.section id='contact' initial={{ opacity: 0 }} whileInView={{ opacity: 1 }} transition={{ delay: 0.250 }} className='my-20 w-[min(100%,38rem)]'>
+    <Card className="flex  flex-col">
+      
+      <CardContent className="flex-1 pb-0">
+        <ChartContainer
+          config={chartConfig}
+          className="mx-auto aspect-square max-h-[250px]"
+        >
+          <PieChart>
+            <ChartTooltip
+              cursor={false}
+              content={<ChartTooltipContent hideLabel />}
             />
-        </section>
-    );
-};
+            <Pie
+              data={chartData}
+              dataKey="visitors"
+              nameKey="browser"
+              innerRadius={60}
+              strokeWidth={5}
+            >
+              <Label
+                content={({ viewBox }) => {
+                  if (viewBox && "cx" in viewBox && "cy" in viewBox) {
+                    return (
+                      <text
+                        x={viewBox.cx}
+                        y={viewBox.cy}
+                        textAnchor="middle"
+                        dominantBaseline="middle"
+                      >
+                        <tspan
+                          x={viewBox.cx}
+                          y={viewBox.cy}
+                          className="fill-foreground text-3xl font-bold"
+                        >
+                          {totalVisitors.toLocaleString()}
+                        </tspan>
+                        <tspan
+                          x={viewBox.cx}
+                          y={(viewBox.cy || 0) + 24}
+                          className="fill-muted-foreground"
+                        >
+                          Visitors
+                        </tspan>
+                      </text>
+                    )
+                  }
+                }}
+              />
+            </Pie>
+          </PieChart>
+        </ChartContainer>
+      </CardContent>
+      <CardFooter className="flex-col gap-2 text-sm">
+        <div className="flex items-center gap-2 font-medium leading-none">
+          Trending up by 5.2% this month <TrendingUp className="h-4 w-4" />
+        </div>
+        <div className="leading-none text-muted-foreground">
+          Showing total visitors for the last 6 months
+        </div>
+      </CardFooter>
+    </Card>
+    </motion.section>
 
-export default MyPerformance;
-
+  )
+}

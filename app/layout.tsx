@@ -6,6 +6,7 @@ import ThemeSwitch from '@/components/theme-switch'
 import ThemeContextProvider from '@/context/theme-context';
 import { SpeedInsights } from "@vercel/speed-insights/next"
 // import { initGA, logPageView } from '../path-to-analytics-file/analytics';
+import Script from "next/script"; // 👈 REQUIRED
 
 const inter = Inter({ subsets: ['latin'] })
 
@@ -16,13 +17,24 @@ export const metadata = {
   content:"tcLcVD1vFzsT_f9GRWgA4Lb8A5_4nYpwb81hRZ5YyvE"
 }
 
-export default function RootLayout({
-  children,
-}: {
-  children: React.ReactNode
-}) {
+export default function RootLayout({children,}: {children: React.ReactNode}) {
   return (
-    <html lang="en" className='!scroll-smooth'>
+    <html lang="en" className='!scroll-smooth'>  
+    <head>
+        {/* Google Analytics */}
+        <Script
+          src="https://www.googletagmanager.com/gtag/js?id=G-D0QZPHE26T"
+          strategy="afterInteractive"
+        />
+        <Script id="google-analytics" strategy="afterInteractive">
+          {`
+            window.dataLayer = window.dataLayer || [];
+            function gtag(){dataLayer.push(arguments);}
+            gtag('js', new Date());
+            gtag('config', 'G-D0QZPHE26T');
+          `}
+        </Script>
+      </head>    
       <meta name="google-site-verification" content="tcLcVD1vFzsT_f9GRWgA4Lb8A5_4nYpwb81hRZ5YyvE" />
       <body className={`${inter.className} bg-gray-50 text-gray-950 pt-28 sm:pt-36 relative !scroll-smooth dark:bg-gray-900 dark:text-gray-50 dark:text-opacity-90`}>
         <div className=' absolute top-[-6rem] right-[6rem] h-[31.25rem] w-[32.24rem] -z-10 rounded-full blur-[6rem] sm:w-[68rem]'></div>

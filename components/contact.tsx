@@ -4,35 +4,57 @@ import React, { useState } from 'react'
 import SectionHeading from './section-heading'
 import { FaPaperPlane } from 'react-icons/fa';
 import { delay, motion } from 'framer-motion';
-import { sendEmail } from '@/action/senEmail';
-import toast from "react-hot-toast";
+import toast, { Toaster } from "react-hot-toast";
 import Swal from 'sweetalert2';
+import loadingSVG from '../public/loading.svg'
+
+interface FormData {
+    name: string;
+    email: string;
+}
 
 export default function Contact() {
-    // const [formData, setFormData] = useState<{ senderMessage: string; senderEmail: string }>({
-    //     senderEmail: '',
-    //     senderMessage: '',
-    // })
+    const [formData, setFormData] = useState<FormData>({ name: '', email: '' });
+    const [loading, setLoading] = useState(false);
 
-    const [senderEmail, setSenderEmail] = useState('')
-    const [message, setMessage] = useState('');
+    const handleChange = (e: React.ChangeEvent<HTMLInputElement>) => {
+        const { name, value } = e.target;
+        setFormData((prevData) => ({
+            ...prevData,
+            [name]: value,
+        }));
+    };
 
+    const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
+        e.preventDefault();
+        setLoading(true);
+        try {
+            const response = await fetch('/api/mailsend', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json',
+                },
+                body: JSON.stringify(formData),
+            });
 
-    const sendMessage = async (e: React.FormEvent) => {
-        e.preventDefault()
-        console.log(senderEmail, message);
-        toast.success("Email sent successfully!");
-        Swal.fire({
-            title: "WhatsApp me at",
-            text: " +918802665778",
-            // icon: "error",
-            showCloseButton: false,
-            showCancelButton: true,
-            focusConfirm: false,
-            confirmButtonText: `<a href="https://api.whatsapp.com/send/?phone=%2B918802665778&text&type=phone_number&app_absent=0" target="_blank">WhatsApp</a>`,
-            confirmButtonAriaLabel: "Thumbs up, great!",
-        });
-    }
+            if (response.ok) {
+                const result = await response.json();
+                // alert('Form submitted successfully!');
+                console.log(result);
+                toast.success('Success - Amit Will Contact You Soon!');
+                setLoading(false);
+
+            } else {
+                setLoading(false);
+                alert('Error submitting form');
+            }
+
+        } catch (error) {
+            console.error('Error submitting form:', error);
+            alert('Error submitting form');
+            setLoading(false);
+        }
+    };
 
 
     return (
@@ -40,13 +62,30 @@ export default function Contact() {
             <SectionHeading>Contact me</SectionHeading>
             <p className='text-gray-700 text-center'>Please contact me directly at <a className='underline' href='mailto:tkamit6@gmail.com'>tkamit6@gmail.com</a>{" "}
                 or through this form <br /> +91-8802665778</p>
-            <form onSubmit={sendMessage} className='mt-10 flex flex-col gap-6'>
-                <input name="senderEmail" onChange={(e) => setSenderEmail(e.target.value)} value={senderEmail}
+            <form onSubmit={handleSubmit} className='mt-10 flex flex-col gap-6'>
+                <input name="email" onChange={handleChange} value={formData.email}
                     type="email" required placeholder='Your Email' className='h-12 rounded-lg border border-black/10 p-4 shadow-sm dark:bg-gray-50/10' />
-                <textarea name="senderMessage" onChange={(e) => setMessage(e.target.value)} value={message}
-                    required placeholder='Your Message' className='h-52 rounded-lg border-black/10 p-4 shadow-md dark:bg-gray-50/10' />
-                <button type='submit' className='group hover:scale-110 h-[3rem] w-[8rem] bg-gray-900  text-white rounded-full outline-none transition justify-center items-center flex gap-2'>Submit <FaPaperPlane className='text-xs opacity-70 transition-all group-hover:opacity-100 group-hover:translate-x-2' /> </button>
+                <input name="name" onChange={handleChange} value={formData.name}
+                    required placeholder='Your Message - Mobile Number' className='h-52 rounded-lg border-black/10 p-4 shadow-md dark:bg-gray-50/10' />
+                <button type='submit' className='group hover:scale-110 h-[3rem] w-[8rem] bg-gray-900  text-white rounded-full outline-none transition okk justify-center items-center flex gap-2' disabled={loading}>  {loading ? '...' : 'Submit'} <FaPaperPlane className='text-xs opacity-70 transition-all group-hover:opacity-100 group-hover:translate-x-2' /> </button>
             </form>
+            <Toaster
+                toastOptions={{
+                    className: '',
+                    duration: 5000,
+                    style: {
+                        background: '#363636',
+                        color: '#fff',
+                    },
+
+                    success: {
+                        duration: 7000,
+                        
+                    },
+                }}
+                position="top-center"
+                reverseOrder={false}
+            />
         </motion.section>
     )
 }
