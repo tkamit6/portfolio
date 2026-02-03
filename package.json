@@ -9,6 +9,7 @@
     "lint": "next lint"
   },
   "dependencies": {
+    "@next/third-parties": "^16.1.6",
     "@stripe/stripe-js": "^2.4.0",
     "@types/node": "20.8.10",
     "@types/react": "18.2.33",
